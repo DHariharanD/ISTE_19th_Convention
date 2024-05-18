@@ -1,0 +1,39 @@
+/* body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+} */
+
+.about-container img{
+    height: 50%;
+    width: 35%;
+}
+
+
+.about-container{
+    padding: 4rem 1.5rem;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.about-container p{
+    font-weight: 400;
+    line-height: 45px;
+    font-size: max(1.5vw, 1rem);
+    text-align: justify;
+    width: 90%;
+}
+
+
+
+@media screen and  (max-width: 780px){
+     .about-container img{
+        width: 100%;
+     }
+     .about-container p{
+        line-height: 25px;
+        width: 100%;
+     }
+}

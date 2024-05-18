@@ -1,0 +1,129 @@
+.sponsor_container{
+ 
+    justify-content: center;
+    align-items: center;
+     margin: 100px auto;
+     width: 85vw;
+     background: rgba(36, 31, 60, 0.8);
+     backdrop-filter: blur(2.5px);
+     box-shadow: 0px 4px 11px 6px rgba(0, 0, 0, 0.25);
+     border-radius: 20px;
+   
+ }
+ 
+ 
+ .sponsor_container-title h2{
+     letter-spacing: 0.1rem;
+     border-radius: 20px;
+     font-size: 2rem;
+     padding: 1.5rem ;
+     background-image: -webkit-linear-gradient(135deg,rgba(35,31,31,0),var(--primary));
+    color: white;
+ 
+     
+ 
+ }
+ .sponsor_container-contents{
+     display: flex;
+     align-items: center;
+     justify-content:space-evenly;
+     flex-wrap:wrap;
+     margin: 2rem;
+ 
+ }
+ .sponsor_container-contents img, .sponsor_container-contents svg{
+ 
+     height: 6rem;
+     margin-bottom: 1rem;
+ }
+ .talktoseniors img{
+    height: 9rem !important;
+ }
+
+ @media screen and (max-width: 780px){
+    .talktoseniors img{
+        height: 7rem !important;
+     }
+}
+
+.golden-title h2{
+    background-image: -webkit-linear-gradient(135deg,rgba(35,31,31,0),var(--secondary));
+}
+
+/* AIC 2024 - Sponsored by CyberPeace */
+
+.sponsor-section {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sponsor-container a {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-container img {
+    width: 100%;
+}
+
+.sponsor-container .content {
+    width: 70%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.sponsor-container .content .socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+}
+
+.sponsor-container .content .socials a {
+    width: fit-content;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: max(2vw, 1.5rem);
+}
+
+.sponsor-container .content p{
+    text-align:  justify;
+    line-height: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: max(1.6vw, 0.9rem);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 600px){
+    .sponsor-container a, .sponsor-container img {
+        width: 100%;
+    }
+
+    .sponsor-container .content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sponsor-container .content p {
+        line-height: 1.5rem;
+    }
+}

@@ -1,0 +1,57 @@
+.containers {
+  overflow: hidden;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  padding: 0% 4%;
+}
+.vid {
+  border-radius: 20px;
+}
+.boxes {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes > video {
+  width: 100%;
+  height: calc(100% - 10vh);
+
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.boxes:hover {
+  flex: 1 1 50%;
+}
+.boxes:hover > video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery {
+  display: flex;
+  /* padding: 50px; */
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+  .containers {
+    flex-direction: column;
+    height: 120vh;
+    gap: 0;
+  }
+
+  .boxes:hover {
+    flex: 1 1 20%;
+  }
+}

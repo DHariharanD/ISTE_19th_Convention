@@ -171,12 +171,12 @@
 
     <div class="nav">
       <div class="item">
-        <a href="#competition">
-          <i class="fa-solid fa-shield-halved"></i>
+        <a href="#about">
+          <i class="fa-solid fa-info"></i>
         </a>
 
         <div class="pop">
-          <p>Competition</p>
+          <p>About</p>
         </div>
       </div>
       
@@ -194,24 +194,24 @@
 
       <div class="item">
         <a href="#exhibition">
-          <i class="fa-solid fa-tents"></i>
+          <i class="fa fa-trophy"></i>
         </a>
 
         <div class="pop">
-          <p>Exhibition</p>
+          <p>Events</p>
         </div>
       </div>
 
       <div class="item">
-        <a href="#passes">
+        <a href="https://unstop.com/o/ClALYgE?lb=zcXatsTJ&utm_medium=Share&utm_source=WhatsApp" target="_blank">
           <i class="fa-solid fa-ticket"></i>
         </a>
 
         <div class="pop">
-          <p>Tickets</p>
+          <p>Register</p>
         </div>
       </div>
-
+      <!--
       <div class="item">
         <a href="#gallery">
           <i class="fa-solid fa-image"></i>
@@ -221,7 +221,7 @@
           <p>Gallery</p>
         </div>
       </div>
-
+      -->
       <div class="item">
         <a href="#speakers">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-megaphone-fill"
@@ -245,7 +245,7 @@
           <p>Sponsors</p>
         </div>
       </div>
-
+      <!--
       <div class="item">
         <a href="#merch">
           <i class="fa-solid fa-shirt"></i>
@@ -255,7 +255,7 @@
           <p>Merch</p>
         </div>
       </div>
-
+      -->
       <!-- <div class="item">
         <a href="./teams.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-people-fill"
@@ -324,6 +324,7 @@
   <div class="body-container">
 
     <!-- About  Start   -->
+    <section id="about">
     <div data-aos="fade-down" class="theme-container">
       <div class="about-container">
         <h2 style="font-size: max(5vw, 3rem)">About</h2>
@@ -347,126 +348,70 @@
         </p>
       </div>
     </div>
+    </section>
 
 
-    <!-- Competition Card Start -->
+    <!-- About  End   -->
+      <div class="frame">
+        <button class="custom-btn btn-15">Read More</button>
+      </div>
 
-    <div class="bubbly-button">Register Now!</div>
-
-   
-    <style>
-      .button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
+      <style>
+        button {
+  margin: 300px;
 }
-
-.bubbly-button {
-  font-family: "Helvetica", "Arial", sans-serif;
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #ff0081;
+.custom-btn {
+  width: 130px;
+  height: 40px;
   color: #fff;
-  border-radius: 4px;
-  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
 }
-.bubbly-button:focus {
-  outline: 0;
+        .btn-15 {
+  background: #b621fe;
+  border: none;
+  z-index: 1;
 }
-.bubbly-button:before, .bubbly-button:after {
+.btn-15:after {
   position: absolute;
   content: "";
-  display: block;
-  width: 140%;
+  width: 0;
   height: 100%;
-  left: -20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
 }
-.bubbly-button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+.btn-15:hover {
+  color: #fff;
 }
-.bubbly-button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
 }
-.bubbly-button:active {
-  transform: scale(0.9);
-  background-color: #e60074;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-}
-.bubbly-button.animate:before {
-  display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
-}
-.bubbly-button.animate:after {
-  display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
+.btn-15:active {
+  top: 2px;
 }
 
-@keyframes topBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-@keyframes bottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-    </style>
+      </style>
 
-    <script>
-      var animateButton = function(e) {
-
-  e.preventDefault;
-  //reset animation
-  e.target.classList.remove('animate');
-  
-  e.target.classList.add('animate');
-  setTimeout(function(){
-    e.target.classList.remove('animate');
-  },700);
-};
-
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
-
-for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener('click', animateButton, false);
-}
-    </script>
-
-
+    <!-- Competition Card Start -->
     <!--<div class="competition-card-conatiner-center-bode-btn" >
               <a class="reg-btn" 
               href="https://unstop.com/conferences/19th-iste-karnataka-state-level-student-convention-19th-iste-karnataka-state-level-student-convention-pes-co-954320?lb=zcXatsTJ&utm_medium=Share&utm_source=WhatsApp" 
@@ -606,11 +551,10 @@ for (var i = 0; i < bubblyButtons.length; i++) {
           </div>
           <div>
             <h2>
-              Working Process of Conclave</h2>
+              Working Flow of the Convention</h2>
           </div>
           <div>
-            <p>Here’s your guide to the Conclave process. Go through all the steps to know the exact process of the
-              fest.</p>
+            <p>Stay informed with our detailed event schedule, outlining all sessions, activities, and key moments throughout the convention.</p>
           </div>
         </div>
         <div class="timeline-main">
@@ -618,7 +562,7 @@ for (var i = 0; i < bubblyButtons.length; i++) {
           <div class="column">
             <div class="row" id="row1">
               <div class="text bg-blue" id="card1">
-                <h2>Day-1: Getting a job in AI</h2>
+                <h2>9:00 AM -- Formal Welcome</h2>
                 <hr>
 
                 <p> <span class="highlight">Speaker Session</span> </p>
@@ -636,12 +580,12 @@ for (var i = 0; i < bubblyButtons.length; i++) {
                 </div>
               </div>
               <div class="time" id="time1">
-                <time>05 Feb '24, Monday</time>
+                <time>9:30 AM</time>
               </div>
             </div>
             <div class="row" id="row2">
               <div class="text bg-orange" id="card2">
-                <h2>Day-2: Entrepreneurship in AI</h2>
+                <h2>OnSpot Registration Starts</h2>
                 <hr>
                 <p> <span class="highlight">Speaker Session</span> </p>
                 <h5 class="event-name">Team Sarvagya</h5>
@@ -889,12 +833,13 @@ for (var i = 0; i < bubblyButtons.length; i++) {
               </a> -->
             </div>
           </div>
-          <div class="skills">
+          <!--<div class="skills">
             <h6>Topic</h6>
             <ul>
               <li>Unleashing Gen AI Magic: Crafting Industry Wizardry in NLP Realms</li>
             </ul>
           </div>
+          -->
         </div>
         <div class="speaker-container margin-bottom">
           <div class="card-info">
@@ -917,12 +862,14 @@ for (var i = 0; i < bubblyButtons.length; i++) {
               </a>
             </div> -->
           </div>
+          <!--
           <div class="skills">
             <h6>Topic</h6>
             <ul>
               <li>Problem Solving and Solution Building</li>
             </ul>
           </div>
+          -->
         </div>
         <div class="speaker-container margin-bottom">
           <div class="card-info">

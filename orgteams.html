@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./img/club_logo.png">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/nav.css">
+  <!-- <link rel="stylesheet" href="./css/nav2.csss"> -->
+  <link rel="stylesheet" href="./css/timeline.css">
+  <link rel="stylesheet" href="./css/event.css">
+  <link rel="stylesheet" href="./css/speakers.css">
+  <link rel="stylesheet" href="./css/sponsors.css">
+  <link rel="stylesheet" href="./css/timeline.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/cart.css">
+  <link rel="stylesheet" href="./css/competition_card.css">
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/coddingWindow.css">
+  <link rel="stylesheet" href="output.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+    integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer data-deferred="1"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="icon" type="image/png" href="img\ISTE_Logo.png" sizes="16x16" />
+      <title>19th ISTE Karnataka State Level Student Convention</title>
+
+</head>
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+</style>
+
+<body>
+
+  <div id="cartButton" class="cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <div id="cart-length" class="in-cart-num"></div>
+  </div>
+
+  <div id="overlay"></div>
+  <div id="checkoutContainer">
+    <!-- checkout content here -->
+    <div id="exit-checkout" class="exit-button">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="order-summary">
+      <div id="orders" class="order-table">
+        <div class="order-row col-head">
+          <div class="serial-no">
+            <div>S.No.</div>
+          </div>
+          <div class="event-name">
+            <div>Event Name</div>
+          </div>
+          <div class="price">
+            <div>Price</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="total-section" class="total-section">
+      <!-- Inject HTML here -->
+    </div>
+    <div class="user-details-section">
+      <input type="text" id="user-name" placeholder="Name" required>
+      <input type="text" id="user-email" placeholder="Email" required>
+      <input type="text" id="user-regno" placeholder="Registeration No." required>
+    </div>
+    <div class="checkout-section">
+      <div class="checkout-container">
+        <button id="cancel-button" class="cancel-button">Cancel</button>
+        <button id="checkout-button" class="submit-button">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="back"></div> -->
+  <!-- <canvas class="particles"></canvas> -->
+  <!-- <div class="back"></div> -->
+  <div class="page-bg"></div>
+
+  <div class="animation-wrapper">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+  </div>
+
+
+  <div id="cir"></div>
+  <div id="nav-container">
+    <div class="bg"></div>
+    <div class="button" tabindex="0">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div id="nav-content" tabindex="0">
+      <!-- <h2>AI Conclave 2.0</h2> -->
+      <ul>
+        <li><a href="#home"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path
+                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+            </svg> Home</a></li>
+        <li><a href="#competition"><i class="fa-solid fa-shield-halved"></i> Competition</a></li>
+        <li><a href="#timeline"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+              class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+              <path
+                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+            </svg> Schedule</a></li>
+        <li><a href="#exhibition"><i class="fa-solid fa-tents"></i> Exhibition</a></li>
+        <li><a id="myBtn" href="#passes"><i class="fa-solid fa-ticket"></i> Tickets</a></li>
+        <li><a href="#gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
+        <li><a href="#speakers"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+              class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+              <path
+                d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
+            </svg> Speakers</a></li>
+        <li><a href="#sponsors"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+              class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+            </svg> Sponsors</a></li>
+        <li><a href="#merch"><i class="fa-solid fa-shirt"></i> Merch</a></li>
+        <!-- <li><a href="./teams.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-people-fill"
+              viewBox="0 0 16 16">
+              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              <path fill-rule="evenodd"
+                d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+              <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+            </svg>
+            Team</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  <!-- nav start -->
+
+  <div class="nav-container hide ">
+
+    <div class="nav">
+      <div class="item">
+        <a href="#about">
+          <i class="fa-solid fa-info"></i>
+        </a>
+
+        <div class="pop">
+          <p>About</p>
+        </div>
+      </div>
+      
+      <div class="item">
+        <a href="#timeline"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="white"
+            class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+            <path
+              d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+          </svg></a>
+
+        <div class="pop">
+          <p>Schedule</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="#exhibition">
+          <i class="fa fa-trophy"></i>
+        </a>
+
+        <div class="pop">
+          <p>Events</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="https://unstop.com/o/ClALYgE?lb=zcXatsTJ&utm_medium=Share&utm_source=WhatsApp" target="_blank">
+          <i class="fa-solid fa-ticket"></i>
+        </a>
+
+        <div class="pop">
+          <p>Register</p>
+        </div>
+      </div>
+      <!--
+      <div class="item">
+        <a href="#gallery">
+          <i class="fa-solid fa-image"></i>
+        </a>
+
+        <div class="pop">
+          <p>Gallery</p>
+        </div>
+      </div>
+      -->
+      <div class="item">
+        <a href="#speakers">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-megaphone-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
+          </svg>
+        </a>
+        <div class="pop">
+          <p>Speakers</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="#sponsors"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+            class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+            <path
+              d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+          </svg> </a>
+        <div class="pop">
+          <p>Sponsors</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="teams.html">
+          <i class="fa-solid fa-people-group"></i>
+        </a>
+
+        <div class="pop">
+          <p>Team</p>
+        </div>
+      </div>
+      
+      <!--
+      <div class="item">
+        <a href="#merch">
+          <i class="fa-solid fa-shirt"></i>
+        </a>
+
+        <div class="pop">
+          <p>Merch</p>
+        </div>
+      </div>
+      -->
+      <!-- <div class="item">
+        <a href="./teams.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-people-fill"
+            viewBox="0 0 16 16">
+            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            <path fill-rule="evenodd"
+              d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+          </svg>
+        </a>
+        <div class="pop">
+          <p>Team</p>
+        </div>
+      </div> -->
+
+    </div>
+
+    <div id="arbazbtn" class="nav-button hidearbnav">
+      <div class="item hidenav">
+        <a class="home-button" href="#home">
+          <!-- <img src="./img/arrow.png">  -->
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg> -->
+          <!-- UP ARROW ICON -->
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <!-- <a href="#home"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-up" viewBox="0 0 16 16">
+           <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+         </svg> </a> -->
+        <div class="pop">
+          <p>Home</p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <!-- nav end -->
+  <div class="body-container">
+    <!-- Speakers Start -->
+    <div data-aos="fade-out" class="theme-container">
+       <div id="speakers" class="container speakers speakers-section">
+         <h2 class="container_heading">Our Team</h2>
+         <h3 class="session_heading"  id="keynote" >Executive Committee</h3>
+         <div class="speakers speaker-box">
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/DrMayuri.jpg" alt="user" />
+             <h3>Dr. Mayuri AVR</h3>
+             <p>Division Head (I/C) <br> AI Division PC <br> Integrated M.Tech AI</p>
+             <div class="buttons">
+             </div>
+             <div class="skills">
+               <ul>
+                 <li>Co-ordinator</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+ 
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/DrSuthir.jpg" alt="user" />
+             <h3>Dr. Suthir S</h3>
+             <p>Division Head (I/C) <br> AI Division PC <br> B.Tech CSE Spl. In AI and ML</p>
+             <div class="buttons">
+             </div>
+             <div class="skills">
+               <ul>
+                 <li>Co-Co-ordinator</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+         </div>
+
+         <h3 class="session_heading"  id="keynote" >International Mentor</h3>
+         <div class="speakers speaker-box">
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/kheira.jpg" alt="user" />
+             <h3>Kheira Lakhdari</h3>
+             <p>Researcher at STIC laboratory Teacher, <br />  Mentor and Omdena Algeria Chapter Lead</p>
+             <div class="buttons">
+             </div>
+             <div class="skills">
+               <ul>
+                 <li>International Mentor</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+         </div>
+
+         <h3 class="session_heading"  id="keynote" >Student Co-ordinator</h3>
+         <div class="speakers speaker-box">
+           
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Rahul_Mandviya.jpg" alt="user" />
+             <h3>Rahul Mandviya</h3>
+             <div class="buttons">
+             </div>
+             <div class="skills">
+               <ul>
+                 <li>President – AI Club</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/omrajani.jpg" alt="user" />
+             <h3>Om Rajani</h3>
+             <div class="buttons">
+             </div>
+             <div class="skills">
+               <ul>
+                 <li>Vice President – AI Club</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/KumarPrakhar-19BAI10012.jpg" alt="user" />
+             <h3>Kumar Prakhar</h3>
+             <div class="buttons">
+             </div>
+             <div class="skills">
+               <ul>
+                 <li>General Secretary – AI Club </li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+         </div>
+
+         <h3 class="session_heading" id="keynote">Organizing Members</h3>
+         <div class="speakers speaker-box">
+
+           
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/rithuraj.jpeg" alt="user" />
+             <h3>Rithuraj Nambiar</h3>
+             <div class="skills">
+               <ul>
+                 <li>Technical Lead</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/argish.jpeg" alt="user" />
+             <h3>Argish Abhangi</h3>
+             <div class="skills">
+               <ul>
+                 <li>Editorial Lead</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+         </div>
+
+         <h3 class="session_heading" id="keynote">Supporting Members</h3>
+         <div class="speakers speaker-box">
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/akashaSaxena.jpg" alt="user" />
+             <h3>Dr Akash Saxena</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/komarswamy.jpg" alt="user" />
+             <h3>Dr Komarasamy</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/pradeep.jpg" alt="user" />
+             <h3>Dr Pradeep Kumar Mishra</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/rudra.jpg" alt="user" />
+             <h3>Dr Rudra Kalyan Nayak</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/SSPShukla.jpg" alt="user" />
+             <h3>Dr Shivam Shukla Prasad</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/anil.jpg" alt="user" />
+             <h3>Dr Anil kumar Yadav</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Siddharth Singh Chouhan.jpg" alt="user" />
+             <h3>Dr Sidharth Singh Chouhan</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/manojKumar.jpg" alt="user" />
+             <h3>Mr. Manoj Kumar</h3>
+             <div class="skills">
+               <ul>
+                 <li></li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+         </div>
+
+         <h3 class="session_heading" id="keynote">Our Team</h3>
+         <div class="speakers speaker-box">
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Rudransh_khandelwal .jpg" alt="user" />
+             <h3>Rudransh Khandelwal</h3>
+             <div class="skills">
+               <ul>
+                 <li>Website In-Charge</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/chinmay.jpg" alt="user" />
+             <h3>Chinmay Inamdar</h3>
+             <div class="skills">
+               <ul>
+                 <li>Ideathon Co-ordinator</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/ChetalyM-2.jpg" alt="user" />
+             <h3>Chetaly Mawal</h3>
+             <div class="skills">
+               <ul>
+                 <li>Sessions Organizer</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+<!-- Card Start -->
+<div class="speaker-container margin-bottom">
+ <div class="card-top">
+ </div>
+ <img class="round" src="./img/Sarangh_Ramesh.jpg" alt="user" />
+ <h3>Sarangh Ramesh</h3>
+ <div class="skills">
+   <ul>
+     <li>Video Team Lead</li>
+   </ul>
+ </div>
+</div>
+<!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Meghavi Jadav.jpg" alt="user" />
+             <h3>Meghavi Jadhav</h3>
+             <div class="skills">
+               <ul>
+                 <li>Sessions Organizer</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/urvi kashyap 21BCE10504.jpeg" alt="user" />
+             <h3>Urvi Kashyap</h3>
+             <div class="skills">
+               <ul>
+                 <li>Keynote session Manager</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/jyotsana.jpg" alt="user" />
+             <h3>Jyotsna Bhatia</h3>
+             <div class="skills">
+               <ul>
+                 <li>Conclave session Manager</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/M SHRADDHA 20BAI10034.jpeg.jpg" alt="user" />
+             <h3>Shraddha Mukkavili</h3>
+             <div class="skills">
+               <ul>
+                 <li>Workshop Manager</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Aayushi Jain 21BCE11523.jpeg" alt="user" />
+             <h3>Ayushi Jain</h3>
+             <div class="skills">
+               <ul>
+                 <li>Debate Organizer in <br> Collaboration with ELA</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Areena Khan.jpg" alt="user" />
+             <h3>Areena Khan</h3>
+             <div class="skills">
+               <ul>
+                 <li>Publicity Manager</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/sneha tiwari.jpg" alt="user" />
+             <h3>Sneha Tiwari</h3>
+             <div class="skills">
+               <ul>
+                 <li>Print and Media Manager</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Fahad usmani 20MIM10083.JPG" alt="user" />
+             <h3>Fahad Usmani</h3>
+             <div class="skills">
+               <ul>
+                 <li>Outreach Coordinator</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+
+           <!-- Card Start -->
+           <div class="speaker-container margin-bottom">
+             <div class="card-top">
+             </div>
+             <img class="round" src="./img/Priyanshu.jpg" alt="user" />
+             <h3>Priyanshu Sharma</h3>
+             <div class="skills">
+               <ul>
+                 <li>Venue Manager</li>
+               </ul>
+             </div>
+           </div>
+           <!-- Card Ends -->
+           
+         </div>
+
+         <!-- Volunteers Start  -->
+<!-- <div id="Volunteers" ></div>
+<div  class="body-container">
+ <div class="theme-container" data-aos="fade-left" id="volunteers" >
+   <div class="volunteers-container">
+     <h1>Volunteers</h1>
+     <div class="volunteers-content">
+       <div class="volunteers-details">
+         <img src="./img/rithuraj.jpeg">
+         <div class="volunteers-name">
+           <div class="shape"></div>
+         <p>Rithural </p>
+         </div>
+       </div>
+       <div class="volunteers-details">
+         <img src="./img/rithuraj.jpeg">
+         <div class="volunteers-name">
+           <div class="shape"></div>
+         <p>Rithural </p>
+         </div>
+       </div>
+       <div class="volunteers-details">
+         <img src="./img/rithuraj.jpeg">
+         <div class="volunteers-name">
+           <div class="shape"></div>
+         <p>Rithural </p>
+         </div>
+       </div>
+       <div class="volunteers-details">
+         <img src="./img/rithuraj.jpeg">
+         <div class="volunteers-name">
+           <div class="shape"></div>
+         <p>Rithural </p>
+         </div>
+       </div>
+       <div class="volunteers-details">
+         <img src="./img/rithuraj.jpeg">
+         <div class="volunteers-name">
+           <div class="shape"></div>
+         <p>Rithural </p>
+         </div>
+       </div>
+       <div class="volunteers-details">
+         <img src="./img/rithuraj.jpeg">
+         <div class="volunteers-name">
+           <div class="shape"></div>
+         <p>Rithural </p>
+         </div>
+       </div>
+     </div>
+ </div>
+ </div>
+ </div> -->
+<!-- Volunteers End  -->
+
+
+
+       </div>
+     </div>
+ </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/merch_slider.js"></script>
+  <script src="js/select-merch-size-logic.js"></script>
+  </div>
+
+
+  <!-- Footer Starts ! -->
+  <div data-aos="fade-right" class="footer-container">
+    <div class="footer-heading">
+      <h1>We've got you covered!</h1>
+      <p>Feel free to contact us any time.</p>
+    </div>
+
+    <div class="footer-links">
+      <img src="img\ISTE_wth_back.png" alt="" class="footer-img" style="border-radius: 50%; height: 130px;">
+      <div class="footer-resources">
+        <h1>Resources</h1>
+        <p><a href="https://drive.google.com/drive/folders/1uBt_DndZxSATysfKPVXiRPD5aw3O7pIz">Brouchere</a></p>
+        <p><a href="https://pescemandya.org/">College Website</a></p>
+      </div>
+      <div class="footer-address">
+  <h1>Contact</h1>
+  <a href="mailto: iste@pesce.ac.in">
+    <p>Mail to -- iste@pesce.ac.in</p>
+  </a>
+  <p id="contact1">MEGHANA M Y -- +91 7975736616</p>
+  <p id="contact2">KUSHALA M -- +91 6361979994</p>
+  <p id="contact3">VIJETHA B C -- +91 7899587067</p>
+  <p id="contact4">D HARIHARAN -- +91 9611228198</p>
+
+  <p style="padding-top: 0.5rem;"></p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const contacts = [
+      { id: 'contact1', number: '+91 7975736616' },
+      { id: 'contact2', number: '+91 6361979994' },
+      { id: 'contact3', number: '+91 7899587067' },
+      { id: 'contact4', number: '+91 9611228198' }
+    ];
+
+    contacts.forEach(contact => {
+      const element = document.getElementById(contact.id);
+      element.style.cursor = 'pointer';
+      element.addEventListener('click', () => {
+        copyToClipboard(contact.number);
+        showNotification(`Number ${contact.number} copied to clipboard`);
+      });
+    });
+  });
+
+  function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.innerText = message;
+    notification.style.position = 'fixed';
+    notification.style.bottom = '10px';
+    notification.style.left = '50%';
+    notification.style.transform = 'translateX(-50%)';
+    notification.style.backgroundColor = '#4CAF50';
+    notification.style.color = 'white';
+    notification.style.padding = '10px';
+    notification.style.borderRadius = '5px';
+    notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    notification.style.zIndex = '1000';
+    document.body.appendChild(notification);
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
+  }
+</script>
+
+      <div class="footer-link">
+        <h1>Stay Connected</h1>
+        <!--
+      
+        --><div class="social-links">
+          <a href="https://whatsapp.com/channel/0029VaAmNhi6xCSGdEb1yP1F" target="_blank"> <i class="fa-brands fa-whatsapp fa-xl"></i></a>
+          <a href="https://qr1.be/85OC" target="_blank"> <i class="fa-brands fa-linkedin fa-xl"></i></a>
+          <a href="https://twitter.com/ISTE_PESCE" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.instagram.com/pesce.iste?utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="./js/nav.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./js/text.js"></script>
+
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- GSAP/ GPLUGINS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"
+  integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/MotionPathPlugin.min.js" integrity="sha512-zYpH105/dxecVaCfJH5fW2KQwIl/1+oTDVyxi3rF/4Rwf/5NhpJgN1eNc4mZukqEYLbE7+W3UDH9MEYoATjRcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/MotionPathPlugin.min.js"
+  integrity="sha512-vu190Nx0a7ou580W/UkzpqxOf5lHJaMcsJZC8RGv5TYQh9xlKdsQvMCeREbL1PqbK/k6jh3Cf/VBiurWwP/kHA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+<script src="./js/app.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- Cart Menu -->
+<script src="./js/cart_menu.js"></script>
+<script src="./js/cart_animation.js"></script>
+
+</html>

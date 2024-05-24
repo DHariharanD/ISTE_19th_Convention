@@ -1244,12 +1244,129 @@ document.getElementById('registerBtn').onclick = function() {
     </div>
   </div>
 
+
+  <!-- Sponsors End  -->
+
+  <section id="faq">
+    <div class="faq-container">
+    <div class="faq-question" style="color: white;">
+    What is the purpose of this FAQ?<span class="dropdown-arrow"></span>
+</div>
+<div class="faq-answer hidden" style="color: white;">This FAQ section provides answers to common questions about our services.</div>
+
+
+<div class="faq-question" style="color: white;">
+    What is the purpose of this FAQ?<span class="dropdown-arrow"></span>
+</div>
+<div class="faq-answer hidden" style="color: white;">This FAQ section provides answers to common questions about our services.</div>
+
+
+    <!-- Add more questions and answers as needed -->
+</div>
+
+  </section>
   <style>
-    .clients-03__logo{transform:translateZ(0);-webkit-filter:grayscale(1);filter:grayscale(1);transition:-webkit-filter 0.15s ease;transition:filter 0.15s ease;transition:filter 0.15s ease, -webkit-filter 0.15s ease
-      }
-    .clients-03__logo:hover{-webkit-filter:grayscale(0);filter:grayscale(0)
+.faq-container {
+    width: 100%;
+    max-width: 800px; /* Adjust based on your preference */
+    margin: auto; /* Center the container */
+    text-align: center; /* Center the content */
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 3px solid #ddd; /* Lighter, thicker border */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between question and dropdown arrow */
+    align-items: center; /* Vertically align items */
+    width: 100%; /* Full width */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Needed for dropdown arrow positioning */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, transform 0.3s ease-out; /* Added transform for dropdown effect */
+    padding-left: 20px;
+    opacity: 0; /* Initially invisible */
+    transform-origin: top; /* Origin for transform */
+}
+
+.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+.faq-question:hover {
+    border-color: #f00; /* Glow effect color */
+}
+
+.faq-question:active +.faq-answer {
+    max-height: 500px; /* Adjust based on content height */
+    opacity: 1; /* Make visible */
+    transform: scaleY(1); /* Reset transform */
+}
+
+.dropdown-arrow::after {
+    content: "▼";
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease-out; /* Smooth transition for arrow */
+}
+
+.faq-question.active +.faq-answer {
+    transform: scaleY(1); /* Expand the box */
+}
+
+.faq-question.active:hover.dropdown-arrow::after {
+    transform: rotate(180deg); /* Rotate arrow down */
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 576px) {
+  .faq-question {
+        width: calc(50% - 10px); /* Adjust based on your preference */
+        float: left; /* Stack horizontally */
+        margin-right: 10px; /* Space between questions */
     }
+
+  .faq-question:last-child {
+        margin-right: 0; /* Remove right margin for last question */
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .faq-question {
+        width: calc(33.333% - 15px); /* Adjust based on your preference */
+        float: left; /* Stack horizontally */
+        margin-right: 15px; /* Space between questions */
+    }
+
+  .faq-question:nth-child(3n) {
+        margin-right: 0; /* Remove right margin for every third question */
+    }
+}
+
   </style>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const dropdownArrow = question.querySelector('.dropdown-arrow');
+
+        // Toggle visibility and dropdown effect
+        answer.classList.toggle('hidden');
+        answer.classList.toggle('active'); // Handle dropdown effect
+
+        // Rotate dropdown arrow
+        dropdownArrow.style.transform = answer.classList.contains('active')? 'rotate(180deg)' : '';
+    });
+});
+
+  </script>
+
  <!--
 <div class="body-container">
     <div id="sponsors" data-aos="fade-right" class="theme-container">
